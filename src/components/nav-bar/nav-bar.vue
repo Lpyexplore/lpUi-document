@@ -1,0 +1,146 @@
+<template>
+    <div class="nav-bar-box">
+        <div class="nav-bar-container">
+
+            <div class="nav-bar-left">
+                <span>
+                    Lpyexplore
+                </span>
+            </div>
+
+            <div class="nav-bar-center" @click="itemClick">
+
+                <div class="line">
+                    <span>|</span>
+                </div>
+
+                <div class="item item2 resources">
+                    <span class="item2"
+                          :class="[{'active': current === 2}]">
+                          资源
+                    </span>
+                </div>
+
+                <div class="item item1 components">
+                    <span class="item1"
+                          :class="[{'active': current === 1}]">
+                        组件
+                    </span>
+                </div>
+
+                <div class="item item0 use">
+                    <span class="item0"
+                          :class="[{'active': current === 0}]">
+                        使用
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="nav-bar-right">
+                <span>
+                    中文
+                </span>
+            </div>
+
+        </div>
+    </div>
+</template>
+
+<script>
+    export default {
+        name: 'nav-bar',
+        data() {
+            return {
+                current: -1
+            }
+        },
+        methods: {
+            itemClick(e) {
+                let element = e.target
+                let active = element.className.match(/item(\d)/)
+                if(active) {
+                    console.log(Number(active[1]))
+                    this.current = Number(active[1])
+                }
+            }
+        }
+    }
+</script>
+
+<style scoped>
+    .nav-bar-box{
+        height: 70px;
+        user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+    }
+    .nav-bar-container{
+        height: 100%;
+        width: 1100px;
+        margin: 0 auto;
+        border-bottom: 1px solid #eee
+    }
+    .nav-bar-left, .nav-bar-center, .nav-bar-right{
+        height: 100%;
+        float: left;
+    }
+    .nav-bar-left{
+        width: 15%;
+        font-size: 25px;
+    }
+    .nav-bar-left span{
+        display: inline-block;
+        height: 100%;
+        line-height: 70px;
+        cursor: pointer;
+    }
+    .nav-bar-center{
+        width: 77%;
+    }
+    .nav-bar-center .item, .line{
+        float: right;
+        height: 70px;
+        width: 100px;
+        text-align: center;
+        font-size: 17px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-bar-center .item:hover span{
+        border-bottom: 3px solid #0baa0b;
+        border-top: 3px solid white ;
+    }
+    .nav-bar-center .item span, .line span{
+        display: inline-block;
+        padding: 10px 5px;
+    }
+    .item span{
+        color: #4b9e3f;
+    }
+    .nav-bar-center .line{
+        color: #e1e1e1;
+    }
+    .nav-bar-center .line span{
+        cursor: default;
+    }
+    .nav-bar-right{
+        display: flex;
+        align-items: center;
+        width: 8%;
+        font-size: 17px;
+    }
+    .nav-bar-right span{
+        display: inline-block;
+        color: #606266;
+        width: 100%;
+        text-align: center;
+    }
+    .active{
+        border-bottom: 3px solid #0baa0b;
+        border-top: 3px solid white ;
+    }
+</style>
