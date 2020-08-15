@@ -1,30 +1,17 @@
-var webpack = require('webpack');
-
 module.exports = {
-    chainWebpack: config => {
-        config.module.rule('md')
-            .test(/\.md/)
-            .use('vue-loader')
-            .loader('vue-loader')
-            .end()
-            .use('vue-markdown-loader')
-            .loader('vue-markdown-loader/lib/markdown-compiler')
-            .options({
-                raw: true
-            })
-    },
-    module: {
-        rules: [
-            {
+    configureWebpack: config => {
+        config.module.rules.push({
+                // 处理markdown文件
                 test: /\.md$/,
-                loader: 'vue-markdown-loader'
-            }
-        ]
-    },
-
-    plugins: [
-        new webpack.LoaderOptionsPlugin({
-            vue: {}
-        })
-    ]
-}
+                use: [
+                    {
+                        loader: "vue-loader"
+                    },
+                    {
+                        loader: require.resolve("./src/loader/markdownLoader")
+                    }
+                ],
+            },
+        );
+    }
+};

@@ -277,3 +277,35 @@ ext:  使用图片原来的扩展名
 
 # 配置文件的分离
 ##### 定义：将生产时和发布时不同的各种配置文件抽离，方便编辑、删除，需要用到webpack-merge
+
+```javascript
+import hljs from 'highlight.js/lib/highlight';
+import 'highlight.js';
+import '../../node_modules/highlight.js/styles/github.css';
+
+let highlight = {};
+
+highlight.install = function (Vue) {
+
+    Vue.directive('highlight', {
+
+        // 被绑定元素插入父节点时调用
+        inserted: function(el) {
+            let blocks = el.querySelectorAll('pre code');
+            for (let i = 0; i < blocks.length; i++) {
+                hljs.highlightBlock(blocks[i]);
+            }
+        },
+
+        // 指令所在组件的 VNode 及其子 VNode 全部更新后调用
+        componentUpdated: function(el) {
+            let blocks = el.querySelectorAll('pre code');
+            for (let i = 0; i < blocks.length; i++) {
+                hljs.highlightBlock(blocks[i]);
+            }
+        }
+    })
+};
+
+export default highlight;
+```
