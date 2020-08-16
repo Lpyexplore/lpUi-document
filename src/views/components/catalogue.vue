@@ -20,7 +20,7 @@
         <div class="letter">B</div>
 
         <div class="component">
-            <router-link to="">Button 按钮</router-link>
+            <router-link to="/components/button">Button 按钮</router-link>
         </div>
 
         <div class="letter">D</div>

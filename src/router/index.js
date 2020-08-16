@@ -10,6 +10,7 @@ const Resources = () => import('../views/resources/resources')
 const Components = () => import('../views/components/components')
 // 以下为Components的子路由
 const UpdateLog = () => import('../views/components/childCpn/updateLog/updateLog')
+const Button = () => import('../views/components/childCpn/button/button')
 
 const routes = [
   {
@@ -36,6 +37,12 @@ const routes = [
         path: 'updateLog',
         components: {
           docs: UpdateLog
+        }
+      },
+      {
+        path: 'button',
+        components: {
+          docs: Button
         }
       }
     ]
