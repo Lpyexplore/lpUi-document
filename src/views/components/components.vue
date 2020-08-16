@@ -8,7 +8,7 @@
 
 <script>
     import showDocs from '../../components/show-docs/show-docs'
-    import catalogue from './childCpn/catalogue'
+    import catalogue from './catalogue'
     export default {
         name: "components",
         components: {
@@ -21,6 +21,6 @@
 <style scoped>
     .components-box{
         height: 100%;
-        width: 100%;
+        float: right;
     }
 </style>

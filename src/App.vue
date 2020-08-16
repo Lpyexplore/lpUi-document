@@ -37,12 +37,14 @@ import navBar from './components/nav-bar/nav-bar'
   @import "assets/css/markdown/markdown-center.css";
   @import "assets/css/reset/normalize.css";
   @import "assets/css/scrollBar/web-scroll-bar.css";
+  @import "assets/css/fonts/fonts.css";
   #app{
     width: 100vw;
     height: 100vh;
+    font-family: normal;
+    font-weight: 400;
   }
   .router-contents{
-    width: 1100px;
-    margin: 0 auto;
+    width: 100%;
   }
 </style>

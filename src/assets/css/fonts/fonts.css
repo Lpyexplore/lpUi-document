@@ -1,0 +1,9 @@
+@font-face {
+    font-family: hand-write;
+    src: url("ttf/hand-write.ttf");
+}
+
+@font-face {
+    font-family: normal;
+    src: url("ttf/GenJyuuGothic-P-Normal.ttf");
+}

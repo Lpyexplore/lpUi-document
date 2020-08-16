@@ -4,7 +4,7 @@
 
             <div class="nav-bar-left">
                 <span>
-                    Lpyexplore
+                    LpUi
                 </span>
             </div>
 
@@ -36,8 +36,8 @@
 
                 </div>
 
-                <div class="item item0 use">
-                    <router-link to="/use">
+                <div class="item item0 employ">
+                    <router-link to="/employ">
                         <span class="item0"
                               :class="[{'active': current === 0}]">
                             使用
@@ -84,6 +84,7 @@
         -webkit-user-select: none;
         -ms-user-select: none;
         -moz-user-select: none;
+        background: white;
     }
     .nav-bar-container{
         height: 100%;
@@ -97,16 +98,19 @@
     }
     .nav-bar-left{
         width: 15%;
-        font-size: 25px;
+        font-size: 35px;
     }
     .nav-bar-left span{
         display: inline-block;
         height: 100%;
         line-height: 70px;
         cursor: pointer;
+        font-family: hand-write;
+        color: #333;
     }
     .nav-bar-center{
         width: 77%;
+        font-family: normal;
     }
     .nav-bar-center .item, .line{
         float: right;
@@ -141,6 +145,7 @@
         align-items: center;
         width: 8%;
         font-size: 17px;
+        font-family: normal;
     }
     .nav-bar-right span{
         display: inline-block;

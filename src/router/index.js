@@ -5,22 +5,22 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const Index = () => import('../views/index/index')
-const Use = () => import('../views/use/use')
+const Employ = () => import('../views/employ/employ')
 const Resources = () => import('../views/resources/resources')
 const Components = () => import('../views/components/components')
-const hahha = () => import('../components/111')
+// 以下为Components的子路由
+const UpdateLog = () => import('../views/components/childCpn/updateLog/updateLog')
 
 const routes = [
-  //   ---------------- 主页面路由 ------------------
   {
     path: '/',
     name: 'index',
     component: Index
   },
   {
-    path: '/use',
-    name: 'use',
-    component: Use
+    path: '/employ',
+    name: 'employ',
+    component: Employ
   },
   {
     path: '/resources',
@@ -35,7 +35,7 @@ const routes = [
       {
         path: 'updateLog',
         components: {
-          docs: hahha
+          docs: UpdateLog
         }
       }
     ]
