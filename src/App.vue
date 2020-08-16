@@ -38,6 +38,7 @@ import navBar from './components/nav-bar/nav-bar'
   @import "assets/css/reset/normalize.css";
   @import "assets/css/scrollBar/web-scroll-bar.css";
   @import "assets/css/fonts/fonts.css";
+  @import "assets/css/font-awesome/css/font-awesome.min.css";
   #app{
     width: 100vw;
     height: 100vh;
