@@ -15,31 +15,41 @@
                 </div>
 
                 <div class="item item2 resources">
-                    <span class="item2"
-                          :class="[{'active': current === 2}]">
+                    <router-link to="/resources">
+                        <span class="item2"
+                              :class="[{'active': current === 2}]">
                           资源
-                    </span>
+                        </span>
+                    </router-link>
                 </div>
 
                 <div class="item item1 components">
-                    <span class="item1"
-                          :class="[{'active': current === 1}]">
-                        组件
-                    </span>
+
+                    <router-link to="/components">
+
+                        <span class="item1"
+                              :class="[{'active': current === 1}]">
+                            组件
+                        </span>
+
+                    </router-link>
+
                 </div>
 
                 <div class="item item0 use">
-                    <span class="item0"
-                          :class="[{'active': current === 0}]">
-                        使用
-                    </span>
+                    <router-link to="/use">
+                        <span class="item0"
+                              :class="[{'active': current === 0}]">
+                            使用
+                        </span>
+                    </router-link>
                 </div>
 
             </div>
 
             <div class="nav-bar-right">
                 <span>
-                    中文
+                    中文文档
                 </span>
             </div>
 
@@ -60,7 +70,6 @@
                 let element = e.target
                 let active = element.className.match(/item(\d)/)
                 if(active) {
-                    console.log(Number(active[1]))
                     this.current = Number(active[1])
                 }
             }
@@ -80,7 +89,7 @@
         height: 100%;
         width: 1100px;
         margin: 0 auto;
-        border-bottom: 1px solid #eee
+        border-bottom: 1px solid #e5e5e5
     }
     .nav-bar-left, .nav-bar-center, .nav-bar-right{
         height: 100%;
@@ -119,12 +128,12 @@
         padding: 10px 5px;
     }
     .item span{
-        color: #4b9e3f;
+        color: #408b37;
     }
     .nav-bar-center .line{
         color: #e1e1e1;
     }
-    .nav-bar-center .line span{
+    .nav-bar-center .line span, .line{
         cursor: default;
     }
     .nav-bar-right{
