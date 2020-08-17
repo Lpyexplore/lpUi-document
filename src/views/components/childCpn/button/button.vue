@@ -3,9 +3,12 @@
         <div class="title">lp-button 组件</div>
         <div class="child-title">基本用法</div>
         <div class="introduction">介绍了lp-button组件的基本用法</div>
-        <cpn-case></cpn-case>
+        <cpn-case>
+            <div slot="cpn">
+                <lp-button></lp-button>
+            </div>
+        </cpn-case>
         <base-md class="markdown-body" v-highlight/>
-
     </div>
 </template>
 
@@ -13,7 +16,7 @@
     import cpnCase from "../cpnCase";
     import baseMd from './md/base.md'
     export default {
-        name: "lp-button",
+        name: "Button",
         components: {
             cpnCase,
             baseMd

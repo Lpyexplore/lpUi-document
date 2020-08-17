@@ -65,7 +65,7 @@
     .cpn-code{
         display: inline-block;
         width: 100%;
-        transition: max-height .3s cubic-bezier(.4, 0, 1, 1);
+        transition: max-height .6s cubic-bezier(.4, 0, 1, 1);
         overflow: hidden;
         max-height: 0;
     }
@@ -76,6 +76,7 @@
         align-items: center;
         cursor: pointer;
         border-top: 1px solid #e1e1e1;
+        position: relative;
     }
     .code-show-btn .txt{
         margin-left: 10px;
