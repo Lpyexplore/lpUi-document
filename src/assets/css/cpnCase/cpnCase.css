@@ -1,0 +1,23 @@
+.title{
+    margin: 50px 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 600;
+}
+.child-title{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.introduction{
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #646363;
+}
+.cpn-case{
+    margin-bottom: 70px;
+}
+.groups{
+    display: inline-block;
+    width: 100%;
+    padding: 15px 0 0 15px;
+}

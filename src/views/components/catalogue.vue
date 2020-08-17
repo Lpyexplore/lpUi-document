@@ -38,7 +38,7 @@
         <div class="letter">I</div>
 
         <div class="component">
-            <router-link to="">Input 输入框</router-link>
+            <router-link to="/components/input">Input 输入框</router-link>
         </div>
 
         <div class="letter">L</div>

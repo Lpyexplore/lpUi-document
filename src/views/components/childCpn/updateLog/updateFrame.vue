@@ -5,13 +5,17 @@
             <div class="title-box">
                 <div class="version">
                     <span>
-                        Version： {{ version }}
+                        Version：
+                        <span class="inner">{{ version }}</span>
                     </span>
                 </div>
 
                 <div class="updateTime">
                     <span>
-                        Update-Time： {{ updateTime }}
+                        Update-Time：
+                        <span class="inner">
+                            {{ updateTime }}
+                        </span>
                     </span>
                 </div>
             </div>
@@ -69,6 +73,9 @@
         font-size: 18px;
         height: 100%;
     }
+    .version span.inner, .updateTime span.inner{
+        color: #0baa0b;
+    }
     .version span, .updateTime span{
         line-height: 60px;
     }
@@ -77,7 +84,7 @@
         justify-content: flex-end;
     }
     .update-content{
-        min-height: 300px;
+        min-height: 100px;
     }
     .update-none{
         height: 300px;

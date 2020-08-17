@@ -6,17 +6,7 @@
         </div>
 
         <div class="cpn-code" :style="{'max-height': isShow? '10000px': '0'}">
-            <slot name="code">
-                请放入代码
-                <div style="height: 50px">哈哈哈</div>
-                <div style="height: 50px">哈哈哈</div>
-                <div style="height: 50px">哈哈哈</div>
-                <div style="height: 50px">哈哈哈</div>
-                <div style="height: 50px">哈哈哈</div>
-                <div style="height: 50px">哈哈哈</div>
-                <div style="height: 50px">哈哈哈</div>
-                <div style="height: 50px">哈哈哈</div>
-            </slot>
+            <slot name="code">请放入代码</slot>
         </div>
 
         <div class="code-show-btn"
@@ -48,6 +38,7 @@
 </script>
 
 <style scoped>
+    @import "../../../assets/css/cpnCase/cpnCase.css";
     .cpn-case-box{
         width: 100%;
         box-sizing: border-box;
@@ -61,6 +52,7 @@
     .cpn-show{
         display: inline-block;
         width: 100%;
+        margin-bottom: 10px;
     }
     .cpn-code{
         display: inline-block;

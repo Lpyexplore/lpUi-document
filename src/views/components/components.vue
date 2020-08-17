@@ -1,7 +1,7 @@
 <template>
     <div class="components-box">
         <show-docs>
-            <catalogue slot="left"></catalogue>
+            <catalogue slot="left"/>
         </show-docs>
     </div>
 </template>
