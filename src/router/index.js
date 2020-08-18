@@ -12,6 +12,9 @@ const Components = () => import('../views/components/components')
 const UpdateLog = () => import('../views/components/childCpn/updateLog/updateLog')
 const Button = () => import('../views/components/childCpn/button/button')
 const Input = () => import('../views/components/childCpn/input/input')
+const Switch = () => import('../views/components/childCpn/switch/switch')
+const Filp = () => import('../views/components/childCpn/filp/filp')
+const Alert = () => import('../views/components/childCpn/alert/alert')
 
 const routes = [
   {
@@ -50,6 +53,24 @@ const routes = [
         path: 'input',
         components: {
           docs: Input
+        }
+      },
+      {
+        path: 'switch',
+        components: {
+          docs: Switch
+        }
+      },
+      {
+        path: 'filp',
+        components: {
+          docs: Filp
+        }
+      },
+      {
+        path: 'alert',
+        components: {
+          docs: Alert
         }
       }
     ]

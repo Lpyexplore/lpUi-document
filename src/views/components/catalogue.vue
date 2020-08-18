@@ -14,7 +14,7 @@
         </div>
 
         <div class="component">
-            <router-link to="">Alert 消息提醒</router-link>
+            <router-link to="/components/alert">Alert 消息提醒</router-link>
         </div>
 
         <div class="letter">B</div>
@@ -32,7 +32,7 @@
         <div class="letter">F</div>
 
         <div class="component">
-            <router-link to="">Filp 卡片</router-link>
+            <router-link to="/components/filp">Filp 卡片</router-link>
         </div>
 
         <div class="letter">I</div>
@@ -64,7 +64,7 @@
         </div>
 
         <div class="component">
-            <router-link to="">Switch 开关</router-link>
+            <router-link to="/components/switch">Switch 开关</router-link>
         </div>
 
         <div class="letter">T</div>
