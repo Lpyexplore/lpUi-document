@@ -43,10 +43,31 @@
             <div slot="cpn" class="groups">
                 <div class="show-events">
                     <lp-switch @change="switchChange"/>
-                    <div v-html="status"/>
+                    <div v-text="status" class="show-txt"/>
                 </div>
             </div>
             <events-md slot="code" class="markdown-body" v-highlight/>
+        </cpn-case>
+
+        <div class="child-title">loading动画</div>
+        <div class="introduction">介绍了lp-switch组件loading属性的用法</div>
+        <cpn-case class="cpn-case">
+            <div slot="cpn" class="groups">
+                <div class="show-loading">
+                    <lp-switch loading @change="successLoading"/>
+                    <div v-text="loading_status1" class="show-txt"/>
+                    <div v-text="`开关将在${timer1}秒后成功打开`"
+                         class="show-txt"
+                         v-show="timer1 !== 4"/>
+                </div>
+                <div class="show-loading">
+                    <lp-switch loading @change="errLoading"/>
+                    <div v-text="loading_status2" class="show-txt"/>
+                    <div v-text="`开关将在${timer2}秒后打开失败`"
+                         class="show-txt" v-show="timer2 !== 4"/>
+                </div>
+            </div>
+            <loading-md slot="code" class="markdown-body" v-highlight/>
         </cpn-case>
 
     </div>
@@ -58,6 +79,7 @@
     import colorMd from './md/color.md';
     import disabledMd from './md/disabled.md';
     import eventsMd from './md/events.md';
+    import loadingMd from './md/loading.md';
 
     export default {
         name: "switches",
@@ -67,19 +89,68 @@
             colorMd,
             disabledMd,
             eventsMd,
+            loadingMd
 
         },
         data() {
             return {
-                status: '当前开关状态为：关闭'
+                status: '当前开关状态为：关闭',
+                loading_status1: '当前开关状态为：关闭',
+                loading_status2: '当前开关状态为：关闭',
+                timer1: 4,
+                timer2: 4
             }
         },
         methods: {
             switchChange(value) {
-                if(value) {
+                if(value === 'open') {
                     this.status = "当前开关状态为：打开"
                 } else {
                     this.status = "当前开关状态为：关闭"
+                }
+            },
+            successLoading(value, obj) {
+                if(value === 'open') {
+                    this.loading_status1 = "当前开关状态为：打开"
+                }
+                else if(value === 'loading') {
+                    this.loading_status1 = "当前开关状态为：加载中"
+                    let t1 = setInterval(() => {
+                        if(this.timer1 !== 0) {
+                            this.timer1 --
+                        }
+                        else {
+                            obj.success()
+                            this.loading_status1 = "当前开关状态为：打开"
+                            this.timer1 = 4
+                            clearInterval(t1)
+                        }
+                    }, 1000)
+                }
+                else {
+                    this.loading_status1 = "当前开关状态为：关闭"
+                }
+            },
+            errLoading(value, obj) {
+                if(value === 'open') {
+                    this.loading_status2 = "当前开关状态为：打开"
+                }
+                else if(value === 'loading') {
+                    this.loading_status2 = "当前开关状态为：加载中"
+                    let t2 = setInterval(() => {
+                        if(this.timer2 !== 0) {
+                            this.timer2 --
+                        }
+                        else {
+                            obj.err()
+                            this.loading_status2 = "当前开关状态为：关闭"
+                            this.timer2 = 4
+                            clearInterval(t2)
+                        }
+                    }, 1000)
+                }
+                else {
+                    this.loading_status2 = "当前开关状态为：关闭"
                 }
             }
         }
@@ -97,7 +168,14 @@
         margin-top: 15px;
         margin-left: 10px;
     }
+    .show-loading{
+        display: inline-block;
+        margin: 15px 40px 0 10px;
+    }
     .switch_box{
         margin-right: 20px;
+    }
+    .show-txt{
+        margin-top: 10px;
     }
 </style>

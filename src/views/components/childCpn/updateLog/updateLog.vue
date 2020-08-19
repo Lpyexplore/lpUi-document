@@ -4,17 +4,23 @@
         <update-frame version="1.0.0" update-time="2020.08.17">
             <v_1_0_0/>
         </update-frame>
+
+        <update-frame version="1.0.3" update-time="2020.08.19">
+            <v_1_0_3/>
+        </update-frame>
     </div>
 </template>
 
 <script>
-    import updateFrame from './updateFrame'
-    import v_1_0_0 from './md/1.0.0.md'
+    import updateFrame from './updateFrame';
+    import v_1_0_0 from './md/1.0.0.md';
+    import v_1_0_3 from './md/1.0.3.md';
     export default {
         name: "updateLog",
         components: {
             updateFrame,
-            v_1_0_0
+            v_1_0_0,
+            v_1_0_3
         }
     }
 </script>

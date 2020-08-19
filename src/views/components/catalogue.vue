@@ -10,7 +10,7 @@
         <div class="letter">A</div>
 
         <div class="component">
-            <router-link to="">Accordion 手风琴</router-link>
+            <router-link to="/components/accordion">Accordion 手风琴</router-link>
         </div>
 
         <div class="component">
@@ -26,7 +26,7 @@
         <div class="letter">D</div>
 
         <div class="component">
-            <router-link to="">Dialog 对话框</router-link>
+            <router-link to="/components/dialog">Dialog 对话框</router-link>
         </div>
 
         <div class="letter">F</div>
@@ -44,23 +44,23 @@
         <div class="letter">L</div>
 
         <div class="component">
-            <router-link to="">Loading 加载</router-link>
+            <router-link to="/components/loading">Loading 加载</router-link>
         </div>
 
         <div class="letter">R</div>
 
         <div class="component">
-            <router-link to="">Radio 单选框</router-link>
+            <router-link to="/components/radio">Radio 单选框</router-link>
         </div>
 
         <div class="component">
-            <router-link to="">Rate 评价</router-link>
+            <router-link to="/components/rate">Rate 评价</router-link>
         </div>
 
         <div class="letter">S</div>
 
         <div class="component">
-            <router-link to="">Sliding 滑动条</router-link>
+            <router-link to="/components/sliding">Sliding 滑动条</router-link>
         </div>
 
         <div class="component">
@@ -70,13 +70,14 @@
         <div class="letter">T</div>
 
         <div class="component">
-            <router-link to="">Tabs 标签页</router-link>
+            <router-link to="/components/tabs">Tabs 标签页</router-link>
         </div>
 
     </div>
 </template>
 
 <script>
+
     export default {
         name: "catalogue"
     }

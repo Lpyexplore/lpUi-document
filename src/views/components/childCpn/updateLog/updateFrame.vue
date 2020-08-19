@@ -21,7 +21,7 @@
             </div>
         </div>
 
-        <div class="update-content">
+        <div class="update-content markdown-body">
             <slot>
                 <div class="update-none">
                     <span>未填写任何更新信息</span>
@@ -85,6 +85,7 @@
     }
     .update-content{
         min-height: 100px;
+        padding: 20px 0;
     }
     .update-none{
         height: 300px;

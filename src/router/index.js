@@ -15,6 +15,13 @@ const Input = () => import('../views/components/childCpn/input/input')
 const Switch = () => import('../views/components/childCpn/switch/switch')
 const Filp = () => import('../views/components/childCpn/filp/filp')
 const Alert = () => import('../views/components/childCpn/alert/alert')
+const Rate = () => import('../views/components/childCpn/rate/rate')
+const Dialog = () => import('../views/components/childCpn/dialog/dialog')
+const Accordion = () => import('../views/components/childCpn/accordion/accordion')
+const Loading = () => import('../views/components/childCpn/loading/loading')
+const Radio = () => import('../views/components/childCpn/radio/radio')
+const Sliding = () => import('../views/components/childCpn/sliding/sliding')
+const Tabs = () => import('../views/components/childCpn/tabs/tabs')
 
 const routes = [
   {
@@ -71,6 +78,48 @@ const routes = [
         path: 'alert',
         components: {
           docs: Alert
+        }
+      },
+      {
+        path: 'rate',
+        components: {
+          docs: Rate
+        }
+      },
+      {
+        path: 'dialog',
+        components: {
+          docs: Dialog
+        }
+      },
+      {
+        path: 'accordion',
+        components: {
+          docs: Accordion
+        }
+      },
+      {
+        path: 'loading',
+        components: {
+          docs: Loading
+        }
+      },
+      {
+        path: 'radio',
+        components: {
+          docs: Radio
+        }
+      },
+      {
+        path: 'sliding',
+        components: {
+          docs: Sliding
+        }
+      },
+      {
+        path: 'tabs',
+        components: {
+          docs: Tabs
         }
       }
     ]
