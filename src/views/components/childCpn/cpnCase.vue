@@ -5,7 +5,7 @@
             <slot name="cpn">请展示组件</slot>
         </div>
 
-        <div class="cpn-code" :style="{'max-height': isShow? '10000px': '0'}">
+        <div class="cpn-code" :style="{'max-height': isShow? '1200px': '0'}">
             <slot name="code">请放入代码</slot>
         </div>
 
@@ -55,11 +55,10 @@
         margin-bottom: 10px;
     }
     .cpn-code{
-        display: inline-block;
+        display: block;
         width: 100%;
-        transition: max-height .6s cubic-bezier(.4, 0, 1, 1);
+        transition: max-height .3s linear;
         overflow: hidden;
-        max-height: 0;
     }
     .code-show-btn{
         height: 44px;

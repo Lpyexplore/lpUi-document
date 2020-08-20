@@ -166,6 +166,12 @@
     .show-normal, .show-plain, .show-round, .show-circle, .show-loading, .show-disabled, .show-click{
         display: inline-block;
         width: 100%;
-        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .show-disabled, .show-click{
+        margin-bottom: 0;
+    }
+    .groups{
+        margin: 20px 0 0 0;
     }
 </style>

@@ -5,7 +5,7 @@
 ```html
 <template>
     <div class="show-slot">
-        <lp-filp class="example">
+        <lp-filp class="example" frontBg="green" backBg="blue">
 
             <div slot="front">
                 <div class="example-title">

@@ -1,13 +1,15 @@
 <template>
     <div class="updateLog-box">
         <div class="title">更新日志</div>
-        <update-frame version="1.0.0" update-time="2020.08.17">
-            <v_1_0_0/>
-        </update-frame>
 
         <update-frame version="1.0.3" update-time="2020.08.19">
             <v_1_0_3/>
         </update-frame>
+
+        <update-frame version="1.0.0" update-time="2020.08.17">
+            <v_1_0_0/>
+        </update-frame>
+
     </div>
 </template>
 

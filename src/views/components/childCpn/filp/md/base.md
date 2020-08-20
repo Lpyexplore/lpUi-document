@@ -4,27 +4,27 @@
 
 ```html
 <div class="show-base">
-    <lp-filp>
+    <lp-filp center>
         <div slot="front">default</div>
         <div slot="back">default</div>
     </lp-filp>
 
-    <lp-filp frontBg="green" backBg="pink">
+    <lp-filp frontBg="green" backBg="pink" center>
         <div slot="front">green</div>
         <div slot="back">pink</div>
     </lp-filp>
 
-    <lp-filp frontBg="lavender" backBg="blue">
+    <lp-filp frontBg="lavender" backBg="blue" center>
         <div slot="front">lavender</div>
         <div slot="back">blue</div>
     </lp-filp>
 
-    <lp-filp frontBg="pink" backBg="green">
+    <lp-filp frontBg="pink" backBg="green" center>
         <div slot="front">pink</div>
         <div slot="back">green</div>
     </lp-filp>
 
-    <lp-filp frontBg="blue" backBg="lavender">
+    <lp-filp frontBg="blue" backBg="lavender" center>
         <div slot="front">blue</div>
         <div slot="back">lavender</div>
     </lp-filp>
