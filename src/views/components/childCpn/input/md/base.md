@@ -3,7 +3,8 @@
 ```html
 <template>
     <lp-input v-model="input" placeholder="请输入内容"/>
-    <div>文本框输入的值为:
+    <div>
+        文本框输入的值为:
         <span v-html="input"/>
     </div>
 </template>

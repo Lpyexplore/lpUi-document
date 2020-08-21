@@ -3,7 +3,8 @@
 ```html
 <template>
     <lp-input type="password" v-model="input" placeholder="请输入密码"/>
-    <div>密码框输入的值为:
+    <div>
+        密码框输入的值为:
         <span v-html="input"/>
     </div>
 </template>

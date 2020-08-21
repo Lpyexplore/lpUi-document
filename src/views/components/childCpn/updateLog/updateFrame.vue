@@ -56,6 +56,9 @@
         border: 1px solid #d2caca;
         border-radius: 7px;
     }
+    .frame-box:hover{
+        box-shadow: 0 0 5px 5px rgba(225, 225, 225, .3);
+    }
     .title{
         height: 60px;
         display: flex;

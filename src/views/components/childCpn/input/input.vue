@@ -7,9 +7,9 @@
         <cpn-case class="cpn-case">
             <div slot="cpn" class="groups">
                 <div class="show-base">
-                    <lp-input v-model="input" placeholder="请输入内容"/>
+                    <lp-input v-model="text" placeholder="请输入内容"/>
                     <div class="showValue">文本框输入的值为:
-                        <span v-html="input"/>
+                        <span v-html="text"/>
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@
         },
         data() {
             return {
-                input: '',
+                text: '',
                 password: ''
             }
         }

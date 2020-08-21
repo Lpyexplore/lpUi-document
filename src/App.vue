@@ -3,12 +3,10 @@
     <nav-bar/>
 
     <div class="router-contents" :style="{'height': `${contentsHeight}px`}">
-      <router-view></router-view>
+      <keep-alive>
+        <router-view/>
+      </keep-alive>
     </div>
-
-<!--    <div class="markdown-body" v-highlight>-->
-<!--      <router-view></router-view>-->
-<!--    </div>-->
 
   </div>
 </template>
@@ -22,7 +20,7 @@ import navBar from './components/nav-bar/nav-bar'
     },
     data() {
       return {
-        contentsHeight: null
+        contentsHeight: null,
       }
     },
     mounted() {
