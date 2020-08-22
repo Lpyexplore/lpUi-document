@@ -3,9 +3,7 @@
     <nav-bar/>
 
     <div class="router-contents" :style="{'height': `${contentsHeight}px`}">
-      <keep-alive>
-        <router-view/>
-      </keep-alive>
+      <router-view/>
     </div>
 
   </div>
@@ -20,7 +18,7 @@ import navBar from './components/nav-bar/nav-bar'
     },
     data() {
       return {
-        contentsHeight: null,
+        contentsHeight: null
       }
     },
     mounted() {

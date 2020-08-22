@@ -1,8 +1,8 @@
 <template>
     <div class="updateLog-box">
         <div class="title">更新日志</div>
-        <update-frame version="1.0.7" update-time="2020.08.21" id="1.0.7">
-            <v_1_0_7/>
+        <update-frame version="1.1.0" update-time="2020.08.22" id="1.1.0">
+            <v_1_1_0/>
         </update-frame>
 
         <update-frame version="1.0.5" update-time="2020.08.20" id="1.0.5">
@@ -22,7 +22,7 @@
 
 <script>
     import updateFrame from './updateFrame';
-    import v_1_0_7 from './md/1.0.7.md';
+    import v_1_1_0 from './md/1.1.0.md';
     import v_1_0_5 from './md/1.0.5.md';
     import v_1_0_3 from './md/1.0.3.md';
     import v_1_0_0 from './md/1.0.0.md';
@@ -31,7 +31,7 @@
         name: "updateLog",
         components: {
             updateFrame,
-            v_1_0_7,
+            v_1_1_0,
             v_1_0_5,
             v_1_0_3,
             v_1_0_0

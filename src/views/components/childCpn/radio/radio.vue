@@ -33,7 +33,7 @@
                     <div class="split">真实属性如下图，也可以用开发者工具自行查看</div>
                 </div>
                 <div class="split">
-                    <img src="../../../../assets/img/showRadioMoreAttr.jpeg" title="点击查看大图" class="img">
+                    <img src="../../../../assets/img/showRadioMoreAttr.jpeg" title="实例图" class="img" >
                 </div>
             </div>
             <more-attr-md slot="code" class="markdown-body" v-highlight/>
