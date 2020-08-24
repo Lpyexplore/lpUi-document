@@ -4,21 +4,26 @@
 
 ```html
 <template>
-    <div class="show-loading">
-        <lp-switch loading @change="successLoading"/>
-        <div v-text="loading_status1" class="show-txt"/>
-        <div v-text="`开关将在${timer1}秒后成功打开`"
-             class="show-txt"
-             v-show="timer1 !== 4"/>
+    <div>
+        <div class="show-loading">
+            <lp-switch loading @change="successLoading"/>
+            <div v-text="loading_status1" class="show-txt"/>
+            <div v-text="`开关将在${timer1}秒后成功打开`"
+                class="show-txt"
+                v-show="timer1 !== 4"/>
+        </div>
+
+        <div class="show-loading">
+            <lp-switch loading @change="errLoading"/>
+            <div v-text="loading_status2" class="show-txt"/>
+            <div v-text="`开关将在${timer2}秒后打开失败`"
+                class="show-txt" 
+                v-show="timer2 !== 4"/>
+        </div>
     </div>
     
-    <div class="show-loading">
-        <lp-switch loading @change="errLoading"/>
-        <div v-text="loading_status2" class="show-txt"/>
-        <div v-text="`开关将在${timer2}秒后打开失败`"
-             class="show-txt" 
-             v-show="timer2 !== 4"/>
-    </div>
+    
+    
 </template>
 
 <script>

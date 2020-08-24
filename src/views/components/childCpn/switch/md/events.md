@@ -6,8 +6,10 @@
 
 ```html
 <template>
-    <lp-switch @change="switchChange"/>
-    <div v-html="status"/>
+    <div>
+        <lp-switch @change="switchChange"/>
+        <div v-html="status"/>
+    </div>
 </template>
 
 <script>
