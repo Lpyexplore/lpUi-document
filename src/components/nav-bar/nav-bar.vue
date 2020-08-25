@@ -122,6 +122,9 @@
         text-align: center;
         font-size: 17px;
         cursor: pointer;
+        
+    }
+    .item a, .line{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -136,6 +139,12 @@
     }
     .item span{
         color: #408b37;
+    }
+    .item a{
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        outline: none;
     }
     .nav-bar-center .line{
         color: #e1e1e1;

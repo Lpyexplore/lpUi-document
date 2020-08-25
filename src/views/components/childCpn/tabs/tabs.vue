@@ -51,7 +51,6 @@
                 <div class="show-disabled">
                     <lp-tabs type="card" 
                              v-model="each" 
-                             :titles="['首页', '推荐', '我', '联系我', '合作与交流']"
                              :disabled="[0, 2]">
                         <div slot="content0">首页内容</div>
                         <div slot="content1">推荐内容</div>

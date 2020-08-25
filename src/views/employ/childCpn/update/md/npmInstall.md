@@ -1,3 +1,3 @@
-```npm
+```javascript
 npm install
 ```

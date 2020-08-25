@@ -37,6 +37,7 @@ const routes = [
   {
     path: '/employ',
     name: 'employ',
+    redirect: '/employ/install',
     component: Employ,
     children: [
       {
@@ -61,6 +62,7 @@ const routes = [
   {
     path: '/components',
     name: 'components',
+    redirect: '/components/updateLog',
     component: Components,
     children: [
       {
