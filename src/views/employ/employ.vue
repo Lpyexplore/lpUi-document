@@ -1,15 +1,19 @@
 <template>
     <div class="employ-box">
-        <show-docs></show-docs>
+        <show-docs>
+            <catalogue slot="left"/>
+        </show-docs>
     </div>
 </template>
 
 <script>
     import showDocs from '../../components/show-docs/show-docs'
+    import catalogue from './catalogue';
     export default {
         name: "employ",
         components: {
-            showDocs
+            showDocs,
+            catalogue
         }
     }
 </script>

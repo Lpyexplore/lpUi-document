@@ -14,7 +14,7 @@
 
             <i class="fa fa-chevron-down icon"
                :style="{'transform': isShow? 'rotate(180deg)': 'rotate(0deg)'}"/>
-            <span class="txt">展示代码</span>
+            <span class="txt">{{isShow? '隐藏代码': '展示代码'}}</span>
         </div>
 
     </div>

@@ -1,9 +1,13 @@
 <template>
   <div id="app">
-    <nav-bar/>
+    <nav-bar class="lp-ui-document-nav"
+             :class="[
+                {'lp-ui-document-nav-show': nav_show === true || nav_show === null}, 
+                {'lp-ui-document-nav-hide': nav_show === false}
+              ]"/>
 
     <div class="router-contents" :style="{'height': `${contentsHeight}px`}">
-      <router-view/>
+      <router-view @startUse="startUse"/>
     </div>
 
   </div>
@@ -18,7 +22,13 @@ import navBar from './components/nav-bar/nav-bar'
     },
     data() {
       return {
-        contentsHeight: null
+        contentsHeight: null,
+        nav_show: null
+      }
+    },
+    methods: {
+      startUse(value) {
+        this.nav_show = value
       }
     },
     mounted() {
@@ -40,6 +50,16 @@ import navBar from './components/nav-bar/nav-bar'
     height: 100vh;
     font-family: normal;
     font-weight: 400;
+  }
+  .lp-ui-document-nav{
+    position: relative;
+  }
+  .lp-ui-document-nav-show{
+    transition: all .3s linear;
+    top: 0
+  }
+  .lp-ui-document-nav-hide{
+    top: -70px;
   }
   .router-contents{
     width: 100%;

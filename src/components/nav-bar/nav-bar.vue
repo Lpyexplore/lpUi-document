@@ -2,10 +2,10 @@
     <div class="nav-bar-box">
         <div class="nav-bar-container">
 
-            <div class="nav-bar-left">
-                <span>
-                    LpUi
-                </span>
+            <div class="nav-bar-left" @click="directToIndex">
+                <router-link to="/">
+                    <span>LpUi</span>
+                </router-link>
             </div>
 
             <div class="nav-bar-center" @click="itemClick">
@@ -38,7 +38,7 @@
 
                 <div class="item item0 employ">
                     <router-link to="/employ">
-                        <span class="item0"
+                        <span class="item0 employ-txt"
                               :class="[{'active': current === 0}]">
                             使用
                         </span>
@@ -72,6 +72,9 @@
                 if(active) {
                     this.current = Number(active[1])
                 }
+            },
+            directToIndex() {
+                this.current = -1
             }
         }
     }

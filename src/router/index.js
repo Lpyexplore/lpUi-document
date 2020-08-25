@@ -8,6 +8,11 @@ const Index = () => import('../views/index/index')
 const Employ = () => import('../views/employ/employ')
 const Resources = () => import('../views/resources/resources')
 const Components = () => import('../views/components/components')
+
+// 以下为Employ的子路由
+const Install = () => import('../views/employ/childCpn/install/install.vue')
+const UpdateUi = () => import('../views/employ/childCpn/update/update.vue')
+
 // 以下为Components的子路由
 const UpdateLog = () => import('../views/components/childCpn/updateLog/updateLog')
 const Button = () => import('../views/components/childCpn/button/button')
@@ -32,7 +37,21 @@ const routes = [
   {
     path: '/employ',
     name: 'employ',
-    component: Employ
+    component: Employ,
+    children: [
+      {
+        path: 'install',
+        components: {
+          docs: Install
+        }
+      },
+      {
+        path: 'update',
+        components: {
+          docs: UpdateUi
+        }
+      }
+    ]
   },
   {
     path: '/resources',
