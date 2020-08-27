@@ -51,6 +51,18 @@
             </div>
             <folding-md slot="code" class="markdown-body" v-highlight/>
         </cpn-case>
+
+        <div class="child-title">事件</div>
+        <div class="introduction">介绍了lp-accordion组件的change事件用法</div>
+        <cpn-case class="cpn-case">
+            <div slot="cpn" class="groups">
+                <div class="show-events">
+                    <lp-accordion v-model="event" @change="cpnChange"/>
+                    <div class="show-history">面板操作记录：{{ history }}</div>
+                </div>
+            </div>
+            <events-md slot="code" class="markdown-body" v-highlight/>
+        </cpn-case>
         
     </div>
 </template>
@@ -59,17 +71,26 @@
     import cpnCase from "../cpnCase";
     import baseMd from './md/base.md';
     import foldingMd from './md/folding.md';
+    import eventsMd from './md/events.md';
     export default {
         name: "accordion",
         components: {
             cpnCase,
             baseMd,
-            foldingMd
+            foldingMd,
+            eventsMd
         },
         data () {
             return {
                 index: 0,
-                only: [1, 2]
+                only: [1, 2],
+                event: -1,
+                history: null
+            }
+        },
+        methods: {
+            cpnChange(i, v) {
+                this.history = `面板${i}被${v? '打开': '关闭'}`
             }
         }
     }
@@ -84,8 +105,12 @@
         display: flex;
         justify-content: center;
     }
-    .show-base, .show-folding{
+    .show-base, .show-folding, .show-events{
         width: 90%;
         margin: 10px 0;
+    }
+    .show-history{
+        margin-top: 20px;
+        color: red;
     }
 </style>
