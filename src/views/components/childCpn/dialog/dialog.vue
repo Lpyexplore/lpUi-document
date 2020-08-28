@@ -4,7 +4,7 @@
 
         <div class="child-title">基本用法</div>
         <div class="introduction">介绍了lp-dialog组件的基本用法</div>
-        <cpn-case class="cpn-case">
+        <cpn-case class="cpn-case" :lines="40">
             <div slot="cpn" class="groups">
                 <div class="show-base">
                     <lp-button style="width: 100px"
@@ -18,7 +18,7 @@
 
         <div class="child-title">对话框参数</div>
         <div class="introduction">介绍了调用lp-dialog组件的方法所提供的参数选择</div>
-        <cpn-case class="cpn-case">
+        <cpn-case class="cpn-case" :lines="75">
             <div slot="cpn" class="groups">
                 <div class="show-userDefined">
                     <lp-button style="width: 100px"

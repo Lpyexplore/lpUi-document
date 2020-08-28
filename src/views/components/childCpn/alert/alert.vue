@@ -4,7 +4,7 @@
 
         <div class="child-title">基本用法</div>
         <div class="introduction">介绍了lp-alert组件的基本用法</div>
-        <cpn-case class="cpn-case">
+        <cpn-case class="cpn-case" :lines="35">
             <div slot="cpn" class="groups">
                 <div class="show-alert">
                     <lp-button @click="showAlert('info')">info提醒框</lp-button>

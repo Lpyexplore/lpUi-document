@@ -15,7 +15,7 @@
 
         <div class="child-title">文本类型</div>
         <div class="introduction">介绍了lp-rate组件支持文本显示的用法</div>
-        <cpn-case class="cpn-case">
+        <cpn-case class="cpn-case" :lines="40">
             <div slot="cpn" class="groups">
                 <div class="show-txt">
                     <lp-rate v-model="test1" textType="number"/>
@@ -40,7 +40,7 @@
 
         <div class="child-title">图标颜色</div>
         <div class="introduction">介绍了lp-rate组件图标固定颜色和渐进式颜色的使用</div>
-        <cpn-case class="cpn-case">
+        <cpn-case class="cpn-case" :lines="40">
             <div slot="cpn" class="groups">
                 <div class="show-setColor1">
                     <div>固定颜色</div>

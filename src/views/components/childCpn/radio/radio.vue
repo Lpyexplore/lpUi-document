@@ -4,7 +4,7 @@
 
         <div class="child-title">基本用法</div>
         <div class="introduction">介绍了lp-radio组件的基本用法</div>
-        <cpn-case class="cpn-case">
+        <cpn-case class="cpn-case" :lines="45">
             <div slot="cpn" class="groups">
                 <div class="show-base">
                     <lp-radio v-model="select" val="0">默认选项0</lp-radio>
@@ -55,7 +55,7 @@
 
         <div class="child-title">禁用</div>
         <div class="introduction">介绍了lp-radio组件disabled属性的用法</div>
-        <cpn-case class="cpn-case">
+        <cpn-case class="cpn-case" :lines="40">
             <div slot="cpn" class="groups">
                 <div class="show-disabled-first">
                     <lp-radio v-model="first" val="0" disabled/>

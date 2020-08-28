@@ -5,7 +5,7 @@
             <slot name="cpn">请展示组件</slot>
         </div>
 
-        <div class="cpn-code" :style="{'max-height': isShow? '1200px': '0'}">
+        <div class="cpn-code" :style="{'max-height': isShow? `${lines}em`: '0'}">
             <slot name="code">请放入代码</slot>
         </div>
 
@@ -23,6 +23,12 @@
 <script>
     export default {
         name: "cpnCase",
+        props: {
+            lines: {
+                type: Number,
+                default: 30
+            }
+        },
         data() {
             return {
                 isShow: false,
@@ -57,8 +63,8 @@
     .cpn-code{
         display: block;
         width: 100%;
-        transition: max-height .3s linear;
         overflow: hidden;
+        transition: max-height .3s;
     }
     .code-show-btn{
         height: 44px;

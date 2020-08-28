@@ -4,7 +4,7 @@
 
         <div class="child-title">基本用法</div>
         <div class="introduction">介绍了lp-tabs组件的基本用法</div>
-        <cpn-case class="cpn-case">
+        <cpn-case class="cpn-case" :lines="40">
             <div slot="cpn" class="groups">
                 <div class="show-base">
                     <lp-tabs class="lp-tabs-class" 
@@ -65,7 +65,7 @@
 
         <div class="child-title">事件</div>
         <div class="introduction">介绍了lp-tabs组件click事件的用法</div>
-        <cpn-case class="cpn-case">
+        <cpn-case class="cpn-case" :lines="40">
             <div slot="cpn" class="groups">
                 <div class="show-events">
                     <lp-tabs class="lp-tabs-class" 

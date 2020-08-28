@@ -1,8 +1,8 @@
 ```javascript
 import Vue from 'vue';
-import lpUI from 'lpyexplore-ui';
-import 'element-ui/lib/theme-chalk/index.css';
 import App from './App.vue';
+import lpUi from 'lpyexplore-ui';
+import 'lpyexplore-ui/dist/lpyexplore-ui.css';
 
 Vue.use(lpUi);
 

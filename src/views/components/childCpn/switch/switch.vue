@@ -3,7 +3,7 @@
         <div class="title">lp-switch 组件</div>
         <div class="child-title">基本用法</div>
         <div class="introduction">介绍了lp-switch组件的基本用法</div>
-        <cpn-case class="cpn-case">
+        <cpn-case class="cpn-case" :lines="20">
             <div slot="cpn" class="groups">
                 <div class="show-base">
                     <lp-switch/>
@@ -39,7 +39,7 @@
 
         <div class="child-title">事件</div>
         <div class="introduction">介绍了lp-switch组件change事件的用法</div>
-        <cpn-case class="cpn-case">
+        <cpn-case class="cpn-case" :lines="40">
             <div slot="cpn" class="groups">
                 <div class="show-events">
                     <lp-switch @change="switchChange"/>
@@ -51,7 +51,7 @@
 
         <div class="child-title">loading动画</div>
         <div class="introduction">介绍了lp-switch组件loading属性的用法</div>
-        <cpn-case class="cpn-case">
+        <cpn-case class="cpn-case" :lines="110">
             <div slot="cpn" class="groups">
                 <div class="show-loading">
                     <lp-switch loading @change="successLoading"/>

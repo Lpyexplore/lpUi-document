@@ -4,7 +4,7 @@
 
         <div class="child-title">基本用法</div>
         <div class="introduction">介绍了lp-filp组件的基本用法</div>
-        <cpn-case class="cpn-case">
+        <cpn-case class="cpn-case"  :lines="40">
             <div slot="cpn" class="groups">
                 <div class="show-base">
                     <lp-filp center>
@@ -34,7 +34,7 @@
 
         <div class="child-title">插槽</div>
         <div class="introduction">介绍了lp-filp组件的插槽用法</div>
-        <cpn-case class="cpn-case">
+        <cpn-case class="cpn-case" :lines="78">
             <div slot="cpn" class="groups">
                 <div class="show-slot">
                     <lp-filp class="example" frontBg="green" backBg="blue">

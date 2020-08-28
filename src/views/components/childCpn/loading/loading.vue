@@ -4,7 +4,7 @@
 
         <div class="child-title">基本用法</div>
         <div class="introduction">介绍了lp-loading组件的基本用法</div>
-        <cpn-case class="cpn-case">
+        <cpn-case class="cpn-case" :lines="40">
             <div slot="cpn" class="groups">
                 <div class="show-loading">
                     <lp-button type="primary" @click="showLoading">加载动画</lp-button>
@@ -15,7 +15,7 @@
 
         <div class="child-title">参数设置</div>
         <div class="introduction">介绍了lp-loading组件参数的用法</div>
-        <cpn-case class="cpn-case">
+        <cpn-case class="cpn-case" :lines="50">
             <div slot="cpn" class="groups">
                 <div class="show-attr">
                     <lp-button type="danger" @click="loadingStyle('bubble')" style="width: 100px">加载样式1</lp-button>

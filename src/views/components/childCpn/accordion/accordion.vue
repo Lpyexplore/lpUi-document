@@ -4,7 +4,7 @@
 
         <div class="child-title">基本用法</div>
         <div class="introduction">介绍了lp-accordion组件的基本用法</div>
-        <cpn-case class="cpn-case">
+        <cpn-case class="cpn-case" :lines="40">
             <div slot="cpn" class="groups">
                 <div class="show-base">
                     <lp-accordion v-model="index" :number="4">
@@ -28,7 +28,7 @@
 
         <div class="child-title">折叠面板</div>
         <div class="introduction">介绍了lp-accordion组件变为折叠面板的用法</div>
-        <cpn-case class="cpn-case">
+        <cpn-case class="cpn-case" :lines="40">
             <div slot="cpn" class="groups">
                 <div class="show-folding">
                     <lp-accordion v-model="only" :number="5" :accordion="false">
@@ -54,7 +54,7 @@
 
         <div class="child-title">事件</div>
         <div class="introduction">介绍了lp-accordion组件的change事件用法</div>
-        <cpn-case class="cpn-case">
+        <cpn-case class="cpn-case" :lines="40">
             <div slot="cpn" class="groups">
                 <div class="show-events">
                     <lp-accordion v-model="event" @change="cpnChange"/>

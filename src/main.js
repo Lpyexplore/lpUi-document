@@ -3,9 +3,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import hljs from './loader/highlight'
-// import lpUi from 'lpyexplore-ui'
-import lpUi from '../node_modules/lpyexplore-ui/dist/lpyexplore-ui.umd.min'
-import '../node_modules/lpyexplore-ui/dist/lpyexplore-ui.css'
+import lpUi from 'lpyexplore-ui'
+import 'lpyexplore-ui/dist/lpyexplore-ui.css'
 
 Vue.use(lpUi)
 

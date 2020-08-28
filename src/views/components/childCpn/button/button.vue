@@ -3,7 +3,7 @@
         <div class="title">lp-button 组件</div>
         <div class="child-title">基本用法</div>
         <div class="introduction">介绍了lp-button组件的基本用法</div>
-        <cpn-case class="cpn-case">
+        <cpn-case class="cpn-case" :lines="70">
             <div slot="cpn" class="groups">
                 <div class="show-normal">
                     <lp-button>default</lp-button>
@@ -53,7 +53,7 @@
 
         <div class="child-title">加载</div>
         <div class="introduction">介绍了lp-button组件loading属性的用法</div>
-        <cpn-case class="cpn-case">
+        <cpn-case class="cpn-case" :lines="45">
             <div slot="cpn" class="groups">
                 <div class="show-loading">
                     <lp-button loading>default</lp-button>
