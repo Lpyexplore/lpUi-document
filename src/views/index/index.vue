@@ -26,9 +26,9 @@
                     this.$emit('startUse', true)
                     this.isClick = true
                 } else {
-                    location.pathname = '/employ'
+                    location.pathname = '/employ/install'
+                    this.$emit('goToUse', 0)
                 }
-                
             }
         },
         mounted() {

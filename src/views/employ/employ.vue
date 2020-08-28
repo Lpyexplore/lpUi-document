@@ -14,6 +14,11 @@
         components: {
             showDocs,
             catalogue
+        },
+        mounted() {
+            if(location.pathname.match(/^\/employ/)) {
+                this.$emit('goToUse', 0)
+            }
         }
     }
 </script>

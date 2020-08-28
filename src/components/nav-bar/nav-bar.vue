@@ -15,9 +15,9 @@
                 </div>
 
                 <div class="item item2 resources">
-                    <router-link to="/resources">
+                    <router-link to="/resources" class="item2">
                         <span class="item2"
-                              :class="[{'active': current === 2}]">
+                              :class="[{'active': value === 2}]">
                           资源
                         </span>
                     </router-link>
@@ -25,10 +25,10 @@
 
                 <div class="item item1 components">
 
-                    <router-link to="/components">
+                    <router-link to="/components" class="item1">
 
                         <span class="item1"
-                              :class="[{'active': current === 1}]">
+                              :class="[{'active': value === 1}]">
                             组件
                         </span>
 
@@ -37,9 +37,9 @@
                 </div>
 
                 <div class="item item0 employ">
-                    <router-link to="/employ">
+                    <router-link to="/employ" class="item0">
                         <span class="item0 employ-txt"
-                              :class="[{'active': current === 0}]">
+                              :class="[{'active': value === 0}]">
                             使用
                         </span>
                     </router-link>
@@ -60,9 +60,10 @@
 <script>
     export default {
         name: 'nav-bar',
-        data() {
-            return {
-                current: -1
+        props: {
+            value: {
+                type: Number,
+                default: -1
             }
         },
         methods: {
@@ -70,11 +71,11 @@
                 let element = e.target
                 let active = element.className.match(/item(\d)/)
                 if(active) {
-                    this.current = Number(active[1])
+                    this.$emit('input', Number(active[1]))
                 }
             },
             directToIndex() {
-                this.current = -1
+                this.$emit('input', -1)
             }
         }
     }
@@ -168,5 +169,9 @@
     .active{
         border-bottom: 3px solid #0baa0b;
         border-top: 3px solid white ;
+    }
+    .item a:not(.router-link-active) span:active{
+        transform: scale(0.8, 0.8);
+        transition: all .1s;
     }
 </style>

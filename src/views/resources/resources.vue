@@ -6,7 +6,12 @@
 
 <script>
     export default {
-        name: "resources"
+        name: "resources",
+        mounted() {
+            if(location.pathname.match(/^\/resources/)) {
+                this.$emit('goToUse', 2)
+            }
+        }
     }
 </script>
 

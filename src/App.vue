@@ -4,10 +4,11 @@
              :class="[
                 {'lp-ui-document-nav-show': nav_show === true || nav_show === null}, 
                 {'lp-ui-document-nav-hide': nav_show === false}
-              ]"/>
+              ]"
+              v-model="index"/>
 
     <div class="router-contents" :style="{'height': `${contentsHeight}px`}">
-      <router-view @startUse="startUse"/>
+      <router-view @startUse="startUse" @goToUse="goToUse"/>
     </div>
 
   </div>
@@ -23,12 +24,16 @@ import navBar from './components/nav-bar/nav-bar'
     data() {
       return {
         contentsHeight: null,
-        nav_show: null
+        nav_show: null,
+        index: -1
       }
     },
     methods: {
       startUse(value) {
         this.nav_show = value
+      },
+      goToUse(value) {
+        this.index = value
       }
     },
     mounted() {
