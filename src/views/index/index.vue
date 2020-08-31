@@ -26,7 +26,7 @@
                     this.$emit('startUse', true)
                     this.isClick = true
                 } else {
-                    location.pathname = '/employ/install'
+                    location.hash = '#/employ/install'
                     this.$emit('goToUse', 0)
                 }
             }

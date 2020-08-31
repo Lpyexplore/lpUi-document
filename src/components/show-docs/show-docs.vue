@@ -9,9 +9,9 @@
             <div class="show-docs-right-inner">
                 <div class="router-view-inner">
                     <slot name="right">
-                        <keep-alive>
+                        <!-- <keep-alive> -->
                             <router-view name="docs"/>
-                        </keep-alive>
+                        <!-- </keep-alive> -->
                     </slot>
                 </div>
             </div>
