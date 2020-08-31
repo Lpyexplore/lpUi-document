@@ -79,6 +79,25 @@
             <disabled-md slot="code" class="markdown-body" v-highlight/>
         </cpn-case>
 
+        <div class="child-title">事件</div>
+        <div class="introduction">介绍了lp-input组件提供了以下事件： focus 、blue 、change</div>
+        <cpn-case class="cpn-case" :lines="55">
+            <div slot="cpn" class="groups">
+                <div class="show-events">
+                    <lp-input v-model="events" 
+                              @focus="inputFocus" 
+                              @blur="inputBlur"
+                              placeholder="focus事件和blur事件"/>
+                    <div v-text="show_txt1"/>
+                    <lp-input v-model="change" 
+                              @change="inputChange"
+                              placeholder="change事件"/>
+                    <div v-text="show_txt2"/>
+                </div>
+            </div>
+            <events-md slot="code" class="markdown-body" v-highlight/>
+        </cpn-case>
+
     </div>
 </template>
 
@@ -90,6 +109,7 @@
     import showPasswordMd from './md/showPassword.md';
     import sizeMd from './md/size.md';
     import disabledMd from './md/disabled.md';
+    import eventsMd from './md/events.md';
     export default {
         name: "Input",
         components: {
@@ -99,7 +119,8 @@
             clearMd,
             showPasswordMd,
             sizeMd,
-            disabledMd
+            disabledMd,
+            eventsMd
         },
         data() {
             return {
@@ -110,7 +131,22 @@
                 bigInput: '',
                 middleInput: '',
                 smallInput: '',
-                hasDisabled: '在禁用前输入的内容'
+                hasDisabled: '在禁用前输入的内容',
+                events: '',
+                change: '',
+                show_txt1: '当前暂未触发focus事件或blur事件',
+                show_txt2: '当前暂未触发change事件'
+            }
+        },
+        methods: {
+            inputFocus() {
+                this.show_txt1 = '获得焦点，触发focus事件'
+            },
+            inputBlur() {
+                this.show_txt1 = '失去焦点，触发blur事件'
+            },
+            inputChange(value) {
+                this.show_txt2 = `输入框内容改变，触发change事件，输入框内容为：${value}`
             }
         }
     }
@@ -128,7 +164,7 @@
     .showValue{
         margin-top: 30px;
     }
-    .show-base, .show-password, .show-clearable, .show-showPassword, .show-disabled{
+    .show-base, .show-password, .show-clearable, .show-showPassword, .show-disabled, .show-events{
         display: inline-block;
         width: 100%;
         margin-left: 10px;

@@ -58,6 +58,7 @@ import navBar from './components/nav-bar/nav-bar'
   }
   .lp-ui-document-nav{
     position: relative;
+    top: -70px;
   }
   .lp-ui-document-nav-show{
     transition: all .3s linear;
