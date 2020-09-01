@@ -25,7 +25,7 @@ const Dialog = () => import('../views/components/childCpn/dialog/dialog')
 const Accordion = () => import('../views/components/childCpn/accordion/accordion')
 const Loading = () => import('../views/components/childCpn/loading/loading')
 const Radio = () => import('../views/components/childCpn/radio/radio')
-const Sliding = () => import('../views/components/childCpn/sliding/sliding')
+const Verification = () => import('../views/components/childCpn/verification/verification')
 const Tabs = () => import('../views/components/childCpn/tabs/tabs')
 
 const routes = [
@@ -132,9 +132,9 @@ const routes = [
         }
       },
       {
-        path: 'sliding',
+        path: 'verification',
         components: {
-          docs: Sliding
+          docs: Verification
         }
       },
       {

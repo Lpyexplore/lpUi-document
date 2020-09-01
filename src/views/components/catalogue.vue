@@ -60,10 +60,6 @@
         <div class="letter">S</div>
 
         <div class="component">
-            <router-link to="/components/sliding">Sliding 滑动条</router-link>
-        </div>
-
-        <div class="component">
             <router-link to="/components/switch">Switch 开关</router-link>
         </div>
 
@@ -71,6 +67,12 @@
 
         <div class="component">
             <router-link to="/components/tabs">Tabs 标签页</router-link>
+        </div>
+
+        <div class="letter">V</div>
+
+        <div class="component">
+            <router-link to="/components/verification">verification 验证</router-link>
         </div>
 
     </div>

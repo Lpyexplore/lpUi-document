@@ -1,6 +1,10 @@
 <template>
     <div class="updateLog-box">
         <div class="title">更新日志</div>
+        <update-frame version="1.2.2" update-time="2020.09.01" id="1.2.2">
+            <v_1_2_2/>
+        </update-frame>
+        
         <update-frame version="1.2.0" update-time="2020.08.31" id="1.2.0">
             <v_1_2_0/>
         </update-frame>
@@ -42,6 +46,7 @@
 
 <script>
     import updateFrame from './updateFrame';
+    import v_1_2_2 from './md/1.2.2.md';
     import v_1_2_0 from './md/1.2.0.md';
     import v_1_1_9 from './md/1.1.9.md';
     import v_1_1_8 from './md/1.1.8.md';
@@ -56,6 +61,7 @@
         name: "updateLog",
         components: {
             updateFrame,
+            v_1_2_2,
             v_1_2_0,
             v_1_1_9,
             v_1_1_8,
