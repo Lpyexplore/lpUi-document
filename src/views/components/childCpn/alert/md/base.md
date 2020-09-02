@@ -4,10 +4,13 @@
 
 ```html
 <template>
-    <lp-button @click="showAlert('info')">info提醒框</lp-button>
-    <lp-button type="success" @click="showAlert('success')">success提醒框</lp-button>
-    <lp-button type="danger" @click="showAlert('err')">err提醒框</lp-button>
-    <lp-button type="warning" @click="showAlert('warning')">warning提醒框</lp-button>
+    <div>
+        <lp-button @click="showAlert('info')">info提醒框</lp-button>
+        <lp-button type="success" @click="showAlert('success')">success提醒框</lp-button>
+        <lp-button type="danger" @click="showAlert('err')">err提醒框</lp-button>
+        <lp-button type="warning" @click="showAlert('warning')">warning提醒框</lp-button>
+    </div>
+    
 </template>
 
 <script>
@@ -16,7 +19,7 @@
             showAlert(type) {
                 this.$alert({
                     type,
-                    lastTime: 2000,
+                    lastTime: 3000,
                     content: `这是一条${type}消息提醒`
                 })
             }
