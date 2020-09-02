@@ -8,7 +8,7 @@
     export default {
         name: "resources",
         mounted() {
-            if(location.pathname.match(/^\/resources/)) {
+            if(location.hash.match(/^#\/resources/)) {
                 this.$emit('goToUse', 2)
             }
         }

@@ -16,7 +16,7 @@
             catalogue
         },
         mounted() {
-            if(location.pathname.match(/^\/employ/)) {
+            if(location.hash.match(/^#\/employ/)) {
                 this.$emit('goToUse', 0)
             }
         }
