@@ -7,7 +7,7 @@
     }
 
     5% {
-        opacity: 0;
+        opacity: .1;
         transform: scale3d(0.2, 0.2, 0.2) translate3d(0, 1500px, 0);
         animation-timing-function: linear;
     }

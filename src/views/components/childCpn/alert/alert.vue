@@ -69,7 +69,6 @@
     }
     .groups button{
         margin-left: 20px;
-        width: 120px;
     }
     .show-alert, .show-bottom{
         margin-top: 15px;

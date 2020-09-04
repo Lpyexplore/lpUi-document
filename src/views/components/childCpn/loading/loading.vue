@@ -18,8 +18,8 @@
         <cpn-case class="cpn-case" :lines="50">
             <div slot="cpn" class="groups">
                 <div class="show-attr">
-                    <lp-button type="danger" @click="loadingStyle('bubble')" style="width: 100px">加载样式1</lp-button>
-                    <lp-button type="warning" @click="loadingStyle('line')" style="width: 100px">加载样式2</lp-button>
+                    <lp-button type="danger" @click="loadingStyle('bubble')">加载样式1</lp-button>
+                    <lp-button type="warning" @click="loadingStyle('line')">加载样式2</lp-button>
                 </div>
             </div>
             <attr-md slot="code" class="markdown-body" v-highlight/>

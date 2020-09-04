@@ -7,8 +7,7 @@
         <cpn-case class="cpn-case" :lines="40">
             <div slot="cpn" class="groups">
                 <div class="show-base">
-                    <lp-button style="width: 100px"
-                               type="primary" @click="btnClick">
+                    <lp-button type="primary" @click="btnClick">
                         弹出对话框
                     </lp-button>
                 </div>
@@ -21,14 +20,12 @@
         <cpn-case class="cpn-case" :lines="75">
             <div slot="cpn" class="groups">
                 <div class="show-userDefined">
-                    <lp-button style="width: 100px"
-                               type="warning"
+                    <lp-button type="warning"
                                @click="specialDialog">
                         自定义对话框
                     </lp-button>
 
-                    <lp-button style="width: 100px"
-                               type="success"
+                    <lp-button type="success"
                                @click="funnyDialog">
                         生动的对话框
                     </lp-button>

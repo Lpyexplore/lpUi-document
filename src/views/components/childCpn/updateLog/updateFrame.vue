@@ -87,7 +87,7 @@
         justify-content: flex-end;
     }
     .update-content{
-        min-height: 100px;
+        min-height: 50px;
         padding: 20px 0;
     }
     .update-none{
