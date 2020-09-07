@@ -1,13 +1,21 @@
 <template>
-    <div class="employ-menu-box">
+    <div class="employ-menu-box" @click="menuClick">
         <div class="category">使用流程</div>
 
         <div class="each-step">
-            <router-link to="/employ/install">安装使用</router-link>
+            <router-link to="/employ/install"
+                         class="install-menu"
+                         :class="[{'active': value === 'install'}]">
+                安装使用
+            </router-link>
         </div>
 
         <div class="each-step">
-            <router-link to="/employ/update">更新</router-link>
+            <router-link to="/employ/update"
+                         class="update-menu"
+                         :class="[{'active': value === 'update'}]">
+                更新
+            </router-link>
         </div>
 
     </div>
@@ -15,7 +23,23 @@
 
 <script>
     export default {
-        name: "catalogue"
+        name: "catalogue",
+        props: {
+            value: {
+                type: String,
+                default: ''
+            }
+        },
+        methods: {
+            menuClick(e) {
+                if(e.target.nodeName !== 'A') return;
+
+                let ret = e.target.className.match(/(\w+)-menu/)
+                if(ret === null) return;
+                
+                this.$emit('input', ret[1])
+            }
+        }
     }
 </script>
 
@@ -51,6 +75,9 @@
         outline: none;
     }
     .each-step a:hover{
+        color: #0e970e;
+    }
+    .employ-menu-box a.active{
         color: #0e970e;
     }
 </style>

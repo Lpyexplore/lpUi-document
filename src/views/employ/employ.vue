@@ -1,7 +1,7 @@
 <template>
     <div class="employ-box">
         <show-docs>
-            <catalogue slot="left"/>
+            <catalogue slot="left" v-model="current"/>
         </show-docs>
     </div>
 </template>
@@ -11,14 +11,22 @@
     import catalogue from './catalogue';
     export default {
         name: "employ",
+        data() {
+            return {
+                current: ''
+            }
+        },
         components: {
             showDocs,
             catalogue
         },
         mounted() {
-            if(location.hash.match(/^#\/employ/)) {
-                this.$emit('goToUse', 0)
-            }
+            let ret = location.hash.match(/^#\/employ\/(\w+)/)
+            if(ret === null) return;
+
+            this.$emit('goToUse', 0)
+            this.current = ret[1]
+            
         }
     }
 </script>

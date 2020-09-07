@@ -1,5 +1,5 @@
 <template>
-    <div class="catalogue-box">
+    <div class="catalogue-box" @click="cpnClick">
 
         <div class="updateLog">
             <router-link to="/components/updateLog">更新日志</router-link>
@@ -10,69 +10,117 @@
         <div class="letter">A</div>
 
         <div class="component">
-            <router-link to="/components/accordion">Accordion 手风琴</router-link>
+            <router-link to="/components/accordion"
+                         class="accordion-menu"
+                         :class="[{'active': value === 'accordion'}]">
+                Accordion 手风琴
+            </router-link>
         </div>
 
         <div class="component">
-            <router-link to="/components/alert">Alert 消息提醒</router-link>
+            <router-link to="/components/alert"
+                         class="alert-menu"
+                         :class="[{'active': value === 'alert'}]">
+                Alert 消息提醒
+            </router-link>
         </div>
 
         <div class="letter">B</div>
 
         <div class="component">
-            <router-link to="/components/button">Button 按钮</router-link>
+            <router-link to="/components/button"
+                         class="button-menu"
+                         :class="[{'active': value === 'button'}]">
+                Button 按钮
+            </router-link>
         </div>
 
         <div class="letter">D</div>
 
         <div class="component">
-            <router-link to="/components/dialog">Dialog 对话框</router-link>
+            <router-link to="/components/dialog"
+                         class="dialog-menu"
+                         :class="[{'active': value === 'dialog'}]">
+                Dialog 对话框
+            </router-link>
         </div>
 
         <div class="letter">F</div>
 
         <div class="component">
-            <router-link to="/components/filp">Filp 卡片</router-link>
+            <router-link to="/components/filp"
+                         class="filp-menu"
+                         :class="[{'active': value === 'filp'}]">
+                Filp 卡片
+            </router-link>
         </div>
 
         <div class="letter">I</div>
 
         <div class="component">
-            <router-link to="/components/input">Input 输入框</router-link>
+            <router-link to="/components/input"
+                         class="input-menu"
+                         :class="[{'active': value === 'input'}]">
+                Input 输入框
+            </router-link>
         </div>
 
         <div class="letter">L</div>
 
         <div class="component">
-            <router-link to="/components/loading">Loading 加载</router-link>
+            <router-link to="/components/loading"
+                         class="loading-menu"
+                         :class="[{'active': value === 'loading'}]">    
+                Loading 加载
+            </router-link>
         </div>
 
         <div class="letter">R</div>
 
         <div class="component">
-            <router-link to="/components/radio">Radio 单选框</router-link>
+            <router-link to="/components/radio"
+                         class="radio-menu"
+                         :class="[{'active': value === 'radio'}]">
+                Radio 单选框
+            </router-link>
         </div>
 
         <div class="component">
-            <router-link to="/components/rate">Rate 评价</router-link>
+            <router-link to="/components/rate"
+                         class="rate-menu"
+                         :class="[{'active': value === 'rate'}]">
+                Rate 评价
+            </router-link>
         </div>
 
         <div class="letter">S</div>
 
         <div class="component">
-            <router-link to="/components/switch">Switch 开关</router-link>
+            <router-link to="/components/switch"
+                         class="switch-menu"
+                         :class="[{'active': value === 'switch'}]">
+                Switch 开关
+            </router-link>
         </div>
 
         <div class="letter">T</div>
 
         <div class="component">
-            <router-link to="/components/tabs">Tabs 标签页</router-link>
+            <router-link to="/components/tabs"
+                         class="tabs-menu"
+                         :class="[{'active': value === 'tabs'}]">
+                Tabs 标签页
+            </router-link>
         </div>
 
         <div class="letter">V</div>
 
         <div class="component">
-            <router-link to="/components/verification">verification 验证</router-link>
+            <router-link to="/components/verification"
+                         class="verification-menu"
+                         :class="[{'active': value === 'verification'}]">
+                verification 验证
+            </router-link>
         </div>
 
     </div>
@@ -81,7 +129,23 @@
 <script>
 
     export default {
-        name: "catalogue"
+        name: "catalogue",
+        props: {
+            value: {
+                type: String,
+                default: ''
+            }
+        },
+        methods: {
+            cpnClick(e) {
+                if(e.target.nodeName !== 'A') return;
+
+                let ret = e.target.className.match(/(\w+)-menu/)
+                if(ret === null) return;
+                
+                this.$emit('input', ret[1])
+            }
+        }
     }
 </script>
 
@@ -121,6 +185,9 @@
     }
     .updateLog{
         height: 50px;
+    }
+    .catalogue-box a.active{
+        color: #0e970e;
     }
     .updateLog a{
         display: inline-block;
