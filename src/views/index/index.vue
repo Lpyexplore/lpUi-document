@@ -1,6 +1,6 @@
 <template>
     <div class="lpUi-document-index-box">
-        <span class="ui-name">
+        <span class="ui-name" data-text="Lpyexplore-ui">
             Lpyexplore-ui
         </span>
         <span class="show-txt" 
@@ -81,5 +81,23 @@
         left: 50%;
         top: 10%;
         transform: translate(-50%, 0);
+    }
+    .ui-name::before{
+        content: attr(data-text);
+        position: absolute;
+        left: -2px;
+        width: 100%;
+        background: white;
+        text-shadow:1px 0 red;
+        animation: animation-before 2s infinite linear alternate-reverse;
+    }
+    .ui-name::after{
+        content: attr(data-text);
+        position: absolute;
+        left: 2px;
+        width: 100%;
+        background: white;
+        text-shadow: -1px 0 blue;
+        animation: animation-after 2s infinite linear alternate-reverse;
     }
 </style>
